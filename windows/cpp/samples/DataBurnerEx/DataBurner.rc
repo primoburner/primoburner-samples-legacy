@@ -1,0 +1,260 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About DataBurnerEx"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    ICON            IDR_DATA_ICON,IDC_STATIC,11,17,20,20
+    LTEXT           "DataBurnerEx Version 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2001",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_DATABURNER_DIALOG DIALOGEX 0, 0, 382, 239
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "DataBurnerEx - Stream Based Burner"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Select a folder to burn:",IDC_STATIC,10,34,90,9
+    EDITTEXT        IDC_EDIT_ROOT,85,33,232,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSE,324,33,45,13
+    LTEXT           "Volume name :",IDC_STATIC,10,53,49,10
+    EDITTEXT        IDC_EDIT_VOLUME,65,53,108,12,ES_AUTOHSCROLL
+    LTEXT           "",IDC_STATIC_REQUIRED_SPACE,287,16,87,11,0,WS_EX_STATICEDGE
+    DEFPUSHBUTTON   "Burn",IDC_BUTTON_CREATE,7,218,50,14
+    PUSHBUTTON      "Create Image",IDC_BUTTON_CREATE_IMAGE,71,218,50,14
+    PUSHBUTTON      "Burn Image",IDC_BUTTON_BURN_IMAGE,133,218,50,14
+    PUSHBUTTON      "Exit",IDCANCEL,325,218,50,14
+    LTEXT           "CD Writers :",IDC_STATIC,10,5,43,9
+    COMBOBOX        IDC_COMBO_DEVICES,10,16,191,62,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "",IDC_STATIC_FREE_SPACE,204,16,77,11,0,WS_EX_STATICEDGE
+    CONTROL         "Simulate",IDC_CHECK_TEST,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,127,58,9
+    CONTROL         "Eject when done",IDC_CHECK_EJECT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,143,67,9
+    LTEXT           "Recording Speed:",IDC_STATIC,104,127,58,9
+    COMBOBOX        IDC_COMBO_SPEED,168,127,30,49,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Eject Device",IDC_STATIC,250,116,52,57
+    PUSHBUTTON      "Close Tray",IDC_BUTTON_EJECTIN,257,128,38,12
+    PUSHBUTTON      "Eject",IDC_BUTTON_EJECTOUT,257,142,38,12
+    GROUPBOX        "Erase",IDC_STATIC,307,116,66,57
+    CONTROL         "Quick",IDC_CHECK_QUICK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,316,126,43,10
+    PUSHBUTTON      "Erase disc",IDC_BUTTON_ERASE,316,140,42,15
+    GROUPBOX        "Parameters",IDC_STATIC,7,116,238,57
+    LTEXT           "Recording Mode:",IDC_STATIC,104,143,57,11
+    COMBOBOX        IDC_COMBO_MODE,168,143,72,40,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Close Disk",IDC_CHECK_CLOSE_DISK,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,16,157,51,13
+    CONTROL         "Raw Mode",IDC_CHECK_RAW,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,104,157,70,12
+    COMBOBOX        IDC_COMBO_IMAGE_TYPE,231,53,87,45,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Image Type:",IDC_STATIC,180,54,45,11
+    CONTROL         "Translate Filenames",IDC_TRANSLATE_NAMES,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,149,97,85,11
+    GROUPBOX        "ISO9660",IDC_STATIC_ISO,9,70,251,44
+    CONTROL         "Restrict Tree Depth to 8 levels",IDC_CHECK_TREE_DEPTH,
+                    "Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,17,97,115,11
+    GROUPBOX        "Joliet",IDC_STATIC_JOLIET,270,70,102,44
+    CONTROL         "Level 2 Long (212)",IDC_RADIO_ISO_ALL,"Button",BS_AUTORADIOBUTTON | WS_DISABLED | WS_GROUP,16,83,77,8
+    CONTROL         "Level2 (31)",IDC_RADIO_ISO_LEVEL2,"Button",BS_AUTORADIOBUTTON | WS_DISABLED,111,83,52,8
+    CONTROL         "Level1(8.3)",IDC_RADIO_ISO_LEVEL1,"Button",BS_AUTORADIOBUTTON | WS_DISABLED,186,83,60,8
+    CONTROL         "Long Names (107)",IDC_RADIO_JOLIET_ALL,"Button",BS_AUTORADIOBUTTON | WS_GROUP,279,83,74,10
+    CONTROL         "Standard Names (64)",IDC_RADIO_JOLIET_SHORTNAMES,"Button",BS_AUTORADIOBUTTON,279,97,79,8
+    GROUPBOX        "Multisession",IDC_STATIC,7,177,238,28
+    CONTROL         "Load last track ",1038,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,190,91,9
+END
+
+IDD_DIALOG_BURNING DIALOGEX 0, 0, 268, 74
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Working..."
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Stop",IDOK,211,7,50,14
+    CONTROL         "Progress1",IDC_PROGRESS_BAR,"msctls_progress32",0x0,39,7,158,11
+    CTEXT           "",IDC_STATIC_STATUS,39,21,158,11,0,WS_EX_STATICEDGE
+    ICON            IDR_DATA_ICON,IDC_STATIC,7,7,21,20
+    CONTROL         "",IDC_PROGRESS_INTERNAL_BUFFER,"msctls_progress32",0x1,89,36,108,11,WS_EX_TRANSPARENT
+    CONTROL         "Device Buffer:",IDC_STATIC,"Static",SS_SIMPLE | WS_GROUP,39,36,48,10
+    RTEXT           "100%",IDC_STATIC,175,50,23,9
+    CONTROL         "0%",IDC_STATIC,"Static",SS_SIMPLE | WS_GROUP,89,50,9,13
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "FileDescription", "DataBurner MFC Application"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "DataBurner"
+            VALUE "LegalCopyright", "Copyright (C) 2001"
+            VALUE "OriginalFilename", "DataBurner.EXE"
+            VALUE "ProductName", "DataBurner Application"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_DATABURNER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 375
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 232
+    END
+
+    IDD_DIALOG_BURNING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 261
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 67
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_DATA_ICON           ICON                    "idr_data.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About DataBurnerEx..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

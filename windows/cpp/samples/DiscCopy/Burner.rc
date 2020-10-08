@@ -1,0 +1,228 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_BURNER_DIALOG DIALOGEX 0, 0, 327, 191
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "PrimoBurner(tm) Engine - Disc Copy Sample Application"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_COMBO_SRC_DEVICES,7,16,246,62,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Simple",IDC_RADIO_SIMPLE_COPY_MODE,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,265,21,37,10
+    CONTROL         "Direct",IDC_RADIO_DIRECT_COPY_MODE,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,265,40,35,10
+    COMBOBOX        IDC_COMBO_DST_DEVICES,7,44,246,62,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSE,274,84,45,13
+    CONTROL         "Read sub-channel",IDC_READ_SUBCHANNEL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,25,119,78,9
+    COMBOBOX        IDC_COMBO_MODE,159,131,155,40,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Copy",IDC_COPY,7,169,50,14
+    PUSHBUTTON      "Exit",IDCANCEL,269,169,50,14
+    LTEXT           "Select source device:",IDC_STATIC,10,5,72,9
+    LTEXT           "Select image output folder:",IDC_STATIC,10,69,89,9
+    EDITTEXT        IDC_EDIT_ROOT,7,84,246,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    GROUPBOX        "Read settings:",IDC_STATIC,7,108,107,41
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,7,158,312,1
+    GROUPBOX        "Write settings:",IDC_STATIC,154,108,165,41
+    LTEXT           "Write method:",IDC_STATIC,161,119,45,8
+    LTEXT           "Select destination device:",IDC_STATIC,10,32,86,9
+    GROUPBOX        "Copy Mode:",IDC_STATIC,258,7,61,50
+    CONTROL         "Use temporary files",IDC_USE_TEMPORARY_FILES,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,25,132,78,9
+END
+
+IDD_PROGRESS_DIALOG DIALOGEX 0, 0, 268, 87
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Working..."
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Stop",IDOK,211,7,50,14
+    CONTROL         "Progress1",IDC_PROGRESS_BAR,"msctls_progress32",0x0,39,7,158,11
+    CTEXT           "",IDC_STATIC_STATUS,39,21,158,11,0,WS_EX_STATICEDGE
+    CONTROL         "",IDC_PROGRESS_INTERNAL_BUFFER,"msctls_progress32",PBS_SMOOTH,89,36,108,11,WS_EX_TRANSPARENT
+    CONTROL         "Device Buffer:",IDC_STATIC,"Static",SS_SIMPLE | WS_GROUP,39,36,48,10
+    RTEXT           "100%",IDC_STATIC,175,50,23,9
+    CONTROL         "0%",IDC_STATIC,"Static",SS_SIMPLE | WS_GROUP,89,50,9,13
+    CTEXT           "",IDC_STATIC_STATUS2,41,60,158,11,0,WS_EX_STATICEDGE
+END
+
+IDD_NEW_DISC_DIALOG DIALOGEX 0, 0, 332, 84
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | DS_CONTROL | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Erase medium",IDC_ERASE,"Button",BS_AUTORADIOBUTTON | WS_GROUP,90,23,60,10
+    CONTROL         "Format medium",IDC_FORMAT,"Button",BS_AUTORADIOBUTTON,175,22,65,10
+    CONTROL         "Use quick erase/format",IDC_QUICKERASEFORMAT,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,120,39,90,10
+    DEFPUSHBUTTON   "Continue",IDC_PROCEED,111,62,50,14
+    DEFPUSHBUTTON   "Cancel",IDC_CANCELWAIT,169,62,50,14
+    CTEXT           "Please insert an empty or rewritable disc",IDC_STATIC,7,7,318,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "FileDescription", "DiscCopy MFC Application"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "DiscCopy"
+            VALUE "LegalCopyright", "Copyright (C) 2001"
+            VALUE "OriginalFilename", "DiscCopy.EXE"
+            VALUE "ProductName", "DiscCopy Application"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_BURNER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 319
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 183
+    END
+
+    IDD_PROGRESS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 261
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 80
+    END
+
+    IDD_NEW_DISC_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 315
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 76
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ERASE_BLANK         "Media is already blank. Do you want to erase it?"
+    IDS_FORMAT_BLANK        "Media is already blank. Do you want to format it?"
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

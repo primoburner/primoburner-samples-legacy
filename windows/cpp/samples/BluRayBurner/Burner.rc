@@ -1,0 +1,249 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_BURNER_DIALOG DIALOGEX 0, 0, 375, 198
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION 
+"PrimoBurner(tm) Engine - Blu-ray Disc (BD) Burning Sample Application"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Blu-ray Writer Devices:",IDC_STATIC,10,5,81,9
+    COMBOBOX        IDC_COMBO_DEVICES,7,16,178,62,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "",IDC_STATIC_FREE_SPACE,190,16,77,12,0,WS_EX_STATICEDGE
+    LTEXT           "",IDC_STATIC_REQUIRED_SPACE,272,16,95,12,0,WS_EX_STATICEDGE
+    LTEXT           "",IDC_STATIC_MEDIA_TYPE,7,31,360,12,0,WS_EX_STATICEDGE
+    LTEXT           "Source Folder:",IDC_STATIC,10,47,52,9
+    EDITTEXT        IDC_EDIT_ROOT,66,47,251,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSE,322,46,45,14
+    LTEXT           "Volume Name :",IDC_STATIC,10,64,49,12
+    EDITTEXT        IDC_EDIT_VOLUME,65,64,97,12,ES_AUTOHSCROLL
+    LTEXT           "File System Type:",IDC_STATIC,170,64,57,12
+    COMBOBOX        IDC_COMBO_IMAGE_TYPE,231,64,86,45,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Parameters",IDC_STATIC,7,81,360,51
+    LTEXT           "Recording Speed:",IDC_STATIC,17,94,58,9
+    COMBOBOX        IDC_COMBO_SPEED,83,94,38,49,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Close Disc",IDC_CHECK_CLOSE_DISC,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,133,94,51,9
+    CONTROL         "Eject when done",IDC_CHECK_EJECT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,292,94,67,9
+    GROUPBOX        "Device Tray",IDC_STATIC,265,136,102,31
+    PUSHBUTTON      "Close",IDC_BUTTON_EJECTIN,269,149,45,15
+    PUSHBUTTON      "Eject",IDC_BUTTON_EJECTOUT,317,149,45,15
+    GROUPBOX        "Format",IDC_STATIC,7,136,160,31
+    PUSHBUTTON      "Format",IDC_BUTTON_FORMAT,119,148,45,14
+    GROUPBOX        "Multi-session",IDC_STATIC,171,136,90,31
+    CONTROL         "Append Data To Disc",IDC_CHECK_LOAD_LAST_TRACK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,176,151,82,9
+    DEFPUSHBUTTON   "Burn",IDC_BUTTON_BURN,6,176,50,15
+    PUSHBUTTON      "Create ISO Image",IDC_BUTTON_CREATE_IMAGE,59,176,68,15
+    PUSHBUTTON      "Burn ISO Image",IDC_BUTTON_BURN_IMAGE,131,176,65,15
+    PUSHBUTTON      "Exit",IDCANCEL,317,176,50,15
+    CONTROL         "BD-Video Compatible",IDC_CHECK_BD_VIDEO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,199,94,83,9
+    CONTROL         "Close Session",IDC_CHECK_CLOSE_SESSION,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,133,106,59,9
+    CONTROL         "Close Track",IDC_CHECK_CLOSE_TRACK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,133,118,59,9
+    COMBOBOX        IDC_COMBO_FORMAT_SUBTYPE,14,149,103,12,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_PROGRESS_DIALOG DIALOGEX 0, 0, 295, 87
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Working..."
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Stop",IDOK,238,7,50,14
+    CONTROL         "Progress1",IDC_PROGRESS_BAR,"msctls_progress32",0x0,39,7,191,11
+    CTEXT           "",IDC_STATIC_STATUS,39,21,191,11,0,WS_EX_STATICEDGE
+    CONTROL         "",IDC_PROGRESS_INTERNAL_BUFFER,"msctls_progress32",PBS_SMOOTH,105,36,108,11,WS_EX_TRANSPARENT
+    CONTROL         "Device Buffer:",IDC_STATIC,"Static",SS_SIMPLE | WS_GROUP,55,36,48,10
+    RTEXT           "100%",IDC_STATIC,191,50,23,9
+    CONTROL         "0%",IDC_STATIC,"Static",SS_SIMPLE | WS_GROUP,105,50,9,13
+    CTEXT           "",IDC_STATIC_STATUS2,39,60,191,11,0,WS_EX_STATICEDGE
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 255, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Blu-ray Disc (BD) Burning Sample"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,198,7,50,14
+    LTEXT           "Blu-ray Disc (BD) Burning Sample Version 1.0",IDC_STATIC,40,10,151,8,SS_NOPREFIX
+    LTEXT           "(C) 2004 Primo Software Corp",IDC_STATIC,40,25,119,8
+    ICON            IDI_BLURAY_BURNER,IDC_STATIC,11,17,21,20
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "FileDescription", "BluRayBurner MFC Application"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "BluRayBurner"
+            VALUE "LegalCopyright", "Copyright (C) 2015"
+            VALUE "OriginalFilename", "BluRayBurner.EXE"
+            VALUE "ProductName", "BluRayBurner Application"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_BURNER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 367
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 190
+    END
+
+    IDD_PROGRESS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 288
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 80
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 248
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_BLURAY_BURNER       ICON                    "idr_data.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "&About Blu-ray Disc (BD) Burning Sample..."
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,247 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PACKETBURNER_DIALOG DIALOGEX 0, 0, 347, 236
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "PacketBurnerEx - Multi-track Incremental Burning"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "1. Select a folder and click the 'Start' button to add it's content to the disc and start a new multi-track session.",IDC_STATIC,7,49,327,18
+    EDITTEXT        IDC_EDIT_ROOT,64,127,222,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSE,295,127,45,13
+    LTEXT           "",IDC_STATIC_REQUIRED_SPACE,257,16,83,11,0,WS_EX_STATICEDGE
+    DEFPUSHBUTTON   "2. Append",IDC_BUTTON_APPEND,65,215,54,14
+    PUSHBUTTON      "Exit",IDCANCEL,290,215,50,14
+    LTEXT           "CD / DVD Writers :",IDC_STATIC,8,5,67,9
+    COMBOBOX        IDC_COMBO_DEVICES,7,16,173,62,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "",IDC_STATIC_FREE_SPACE,186,16,70,11,0,WS_EX_STATICEDGE
+    CONTROL         "Eject when done",IDC_CHECK_EJECT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,156,67,9
+    LTEXT           "Recording Speed:",IDC_STATIC,104,156,58,9
+    COMBOBOX        IDC_COMBO_SPEED,168,156,30,49,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Eject Media",IDC_STATIC,225,142,114,34
+    PUSHBUTTON      "Close Tray",IDC_BUTTON_EJECTIN,289,156,38,12
+    PUSHBUTTON      "Eject",IDC_BUTTON_EJECTOUT,235,156,38,12
+    GROUPBOX        "Parameters",IDC_STATIC,7,142,215,33
+    DEFPUSHBUTTON   "3. Finalize Disc",IDC_BUTTON_FINALIZE,123,215,95,14
+    LTEXT           "Select a folder:",IDC_STATIC,7,127,50,8
+    LTEXT           "3. Select a folder and click the 'Finaslize Disc' button to add it's content to the disc and finalize the multi-track session.",IDC_STATIC,7,86,329,19
+    LTEXT           "WARNING: The operating system will not be able to see any files you burned until you finalize the disc. ",IDC_STATIC,7,110,333,12
+    LTEXT           "",IDC_STATIC_MEDIA_TYPE,7,32,333,12,0,WS_EX_STATICEDGE
+    PUSHBUTTON      "1. Start",IDC_BUTTON_START,7,214,54,15
+    GROUPBOX        "Erase",IDC_STATIC,7,176,115,29
+    CONTROL         "Quick",IDC_CHECK_QUICK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,188,43,10
+    PUSHBUTTON      "Erase",IDC_BUTTON_ERASE,69,185,42,15
+    GROUPBOX        "Format",IDC_STATIC,129,176,115,29
+    CONTROL         "Quick",IDC_CHECK_QUICK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,143,188,43,10
+    PUSHBUTTON      "Format",IDC_BUTTON_FORMAT,192,185,42,15
+    LTEXT           "2. Select a folder and click the 'Append' button to add it's content to the disc.",IDC_STATIC,7,71,327,9
+END
+
+IDD_DIALOG_BURNING DIALOGEX 0, 0, 268, 74
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Working..."
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Stop",IDOK,211,7,50,14
+    CONTROL         "Progress1",IDC_PROGRESS_BAR,"msctls_progress32",0x0,39,7,158,11
+    CTEXT           "",IDC_STATIC_STATUS,39,21,158,11,0,WS_EX_STATICEDGE
+    ICON            IDR_DATA_ICON,IDC_STATIC,7,7,21,20
+    CONTROL         "",IDC_PROGRESS_INTERNAL_BUFFER,"msctls_progress32",0x1,89,36,108,11,WS_EX_TRANSPARENT
+    CONTROL         "Device Buffer:",IDC_STATIC,"Static",SS_SIMPLE | WS_GROUP,39,36,48,10
+    RTEXT           "100%",IDC_STATIC,175,50,23,9
+    CONTROL         "0%",IDC_STATIC,"Static",SS_SIMPLE | WS_GROUP,89,50,9,13
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About PacketBurnerEx"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    ICON            IDR_DATA_ICON,IDC_STATIC,11,17,20,20
+    LTEXT           "PacketBurnerEx Version 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "(C) 2004 Primo Software Corp",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "FileDescription", "PacketBurner MFC Application"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "PacketBurner"
+            VALUE "LegalCopyright", "Copyright (C) 2001"
+            VALUE "OriginalFilename", "PacketBurner.EXE"
+            VALUE "ProductName", "PacketBurner Application"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_PACKETBURNER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 340
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 229
+    END
+
+    IDD_DIALOG_BURNING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 261
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 67
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_DATA_ICON           ICON                    "idr_data.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About PacketBurnerEx..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

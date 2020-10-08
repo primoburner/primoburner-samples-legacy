@@ -1,0 +1,282 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_BURNER_DIALOG DIALOGEX 0, 0, 380, 265
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "AudioBurner"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "CD Writers :",IDC_STATIC,7,7,43,9
+    COMBOBOX        IDC_COMBO_DEVICES,7,18,191,62,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CTEXT           "",IDC_STATIC_FREE_SPACE,207,19,98,11,0,WS_EX_STATICEDGE
+    LISTBOX         IDC_LIST_PLAYLIST,7,58,366,100,LBS_NOINTEGRALHEIGHT | LBS_WANTKEYBOARDINPUT | LBS_EXTENDEDSEL | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Simulate",IDC_CHECK_TEST,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,209,58,9
+    CONTROL         "Eject when done",IDC_CHECK_EJECT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,225,67,9
+    LTEXT           "Recording Speed:",IDC_STATIC,104,209,58,9
+    COMBOBOX        IDC_COMBO_SPEED,168,209,30,49,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Eject Device",IDC_STATIC,250,198,52,62
+    PUSHBUTTON      "Close Tray",IDC_BUTTON_EJECTIN,254,210,41,12
+    PUSHBUTTON      "Eject",IDC_BUTTON_EJECTOUT,254,224,41,12
+    GROUPBOX        "Erase",IDC_STATIC,307,198,66,62
+    CONTROL         "Quick",IDC_CHECK_QUICK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,316,208,43,10
+    PUSHBUTTON      "Erase disc",IDC_BUTTON_ERASE,316,222,42,15
+    DEFPUSHBUTTON   "Burn",IDC_BUTTON_START,320,17,53,15
+    GROUPBOX        "Parameters",IDC_STATIC,7,198,238,62
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME | SS_SUNKEN,7,37,367,1
+    CONTROL         "Write CD-TEXT",IDC_CHECK_CDTEXT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,177,68,9
+    PUSHBUTTON      "Track CDText",1016,87,174,53,15,WS_DISABLED
+    PUSHBUTTON      "Album CDText ",IDC_ALBUM_CDTEXT,145,174,53,15,WS_DISABLED
+    GROUPBOX        "CD-TEXT",IDC_STATIC,7,163,198,33
+    LTEXT           "Recording Mode:",IDC_STATIC,104,225,57,11
+    COMBOBOX        IDC_COMBO_MODE,168,225,72,40,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Close Disk",IDC_CHECK_CLOSE_DISK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,239,51,13
+    CONTROL         "Decode audio in temp files",IDC_CHECK_DECODE_IN_TEMPFILES,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,105,242,96,10
+    PUSHBUTTON      "Add Audio Files",IDC_BUTTON_ADD_FILES,9,41,63,14
+    PUSHBUTTON      "Remove Files",IDC_BUTTON_REMOVE_FILES,77,41,50,14
+    CONTROL         "Use audio files as streams",IDC_CHECK_USE_AUDIO_STREAM,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,133,45,97,10
+    GROUPBOX        "Hidden Track",IDC_STATIC,209,163,164,33
+    CONTROL         "Place first audio file in a hidden track",IDC_CHECK_HIDDENTRACK,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,218,177,146,9
+END
+
+IDD_CDTEXT_DIALOG DIALOGEX 0, 0, 291, 181
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "CD Text Settings"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "&Title:",IDC_STATIC,7,9,19,8,0,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT_ALBUM_TITLE,79,7,131,14,ES_AUTOHSCROLL
+    LTEXT           "&Performer:",IDC_STATIC,7,27,40,8,0,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT_ALBUM_PERFORMER,79,24,131,14,ES_AUTOHSCROLL
+    LTEXT           "&Song Writer:",IDC_STATIC,7,47,40,8,0,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT_ALBUM_SONGWRITER,79,44,131,14,ES_AUTOHSCROLL
+    LTEXT           "&Composer:",IDC_STATIC,7,68,40,8,0,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT_ALBUM_COMPOSER,79,65,131,14,ES_AUTOHSCROLL
+    LTEXT           "&Arranger:",IDC_STATIC,7,89,40,8,0,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT_ALBUM_ARRANGER,79,86,131,14,ES_AUTOHSCROLL
+    LTEXT           "&Message:",IDC_STATIC,7,107,40,8,0,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT_ALBUM_MESSAGE,79,105,131,14,ES_AUTOHSCROLL
+    LTEXT           "&Genre:",IDC_STATIC,7,143,40,8,0,WS_EX_TRANSPARENT
+    LTEXT           "&UPC/ISRC:",IDC_STATIC,7,162,40,8,0,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT_ALBUM_UPC_ISRC,79,160,131,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,234,7,50,16
+    PUSHBUTTON      "Cancel",IDCANCEL,234,26,50,16
+    COMBOBOX        IDC_COMBO_GENRE,79,141,131,118,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Disk ID:",IDC_STATIC,7,124,40,8,0,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT_DISK_ID,79,122,131,14,ES_AUTOHSCROLL
+END
+
+IDD_PROGRESS_DIALOG DIALOGEX 0, 0, 268, 74
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Working..."
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Stop",IDOK,211,7,50,14
+    CONTROL         "Progress1",IDC_PROGRESS_BAR,"msctls_progress32",0x0,39,7,158,11
+    CTEXT           "",IDC_STATIC_STATUS,39,21,158,11,0,WS_EX_STATICEDGE
+    CONTROL         "",IDC_PROGRESS_INTERNAL_BUFFER,"msctls_progress32",0x1,89,36,108,11,WS_EX_TRANSPARENT
+    CONTROL         "Device Buffer:",IDC_STATIC,"Static",SS_SIMPLE | WS_GROUP,39,36,48,10
+    RTEXT           "100%",IDC_STATIC,175,50,23,9
+    CONTROL         "0%",IDC_STATIC,"Static",SS_SIMPLE | WS_GROUP,89,50,9,13
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About AudioBurner"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    ICON            IDI_AUDIO_BURNER,IDC_STATIC,11,17,20,20
+    LTEXT           "AudioBurner Version 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "(C) 2004 Primo Software Corp",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "FileDescription", "AudioBurner MFC Application"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "AudioBurner"
+            VALUE "LegalCopyright", "Copyright (C) 2006"
+            VALUE "OriginalFilename", "AudioBurner.EXE"
+            VALUE "ProductName", "AudioBurner Application"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_BURNER_DIALOG, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 263
+    END
+
+    IDD_CDTEXT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 284
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 174
+    END
+
+    IDD_PROGRESS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 261
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 67
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_AUDIO_BURNER        ICON                    "idr_audio.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "&About AudioBurner..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

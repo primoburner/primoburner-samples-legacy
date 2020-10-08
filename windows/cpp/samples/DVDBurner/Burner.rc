@@ -1,0 +1,216 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_BURNER_DIALOG DIALOGEX 0, 0, 375, 205
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "PrimoBurner(tm) Engine - DVD Burning Sample Application"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "DVD Writers :",IDC_STATIC,10,5,43,9
+    COMBOBOX        IDC_COMBO_DEVICES,7,16,178,62,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "",IDC_STATIC_FREE_SPACE,190,16,77,12,0,WS_EX_STATICEDGE
+    LTEXT           "",IDC_STATIC_REQUIRED_SPACE,272,16,95,12,0,WS_EX_STATICEDGE
+    LTEXT           "",IDC_STATIC_MEDIA_TYPE,7,30,360,12,0,WS_EX_STATICEDGE
+    LTEXT           "Source Folder:",IDC_STATIC,10,46,52,9
+    EDITTEXT        IDC_EDIT_ROOT,66,45,251,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSE,322,45,45,13
+    LTEXT           "Volume Name :",IDC_STATIC,10,62,49,12
+    EDITTEXT        IDC_EDIT_VOLUME,65,62,97,12,ES_AUTOHSCROLL
+    LTEXT           "File System Type:",IDC_STATIC,170,62,57,12
+    COMBOBOX        IDC_COMBO_IMAGE_TYPE,231,62,86,45,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Parameters",IDC_STATIC,7,81,300,58
+    LTEXT           "Recording Speed:",IDC_STATIC,17,92,58,9
+    COMBOBOX        IDC_COMBO_SPEED,83,92,38,49,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Recording Mode:",IDC_STATIC,127,92,57,11
+    COMBOBOX        IDC_COMBO_MODE,191,92,98,40,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "DVD-Video Compatible",IDC_CHECK_DVD_VIDEO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,110,115,9
+    CONTROL         "Simulate",IDC_CHECK_TEST,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,123,58,9
+    CONTROL         "Close Disc",IDC_CHECK_CLOSE_DISK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,191,110,51,9
+    CONTROL         "Eject when done",IDC_CHECK_EJECT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,191,123,67,9
+    GROUPBOX        "Device Tray",IDC_STATIC,315,81,52,57
+    PUSHBUTTON      "Close",IDC_BUTTON_EJECTIN,322,94,38,15
+    PUSHBUTTON      "Eject",IDC_BUTTON_EJECTOUT,322,110,38,15
+    GROUPBOX        "Erase",IDC_STATIC,7,140,115,29
+    CONTROL         "Quick",IDC_CHECK_QUICK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,152,43,10
+    PUSHBUTTON      "Erase",IDC_BUTTON_ERASE,69,149,42,15
+    GROUPBOX        "Format",IDC_STATIC,129,140,115,29
+    CONTROL         "Quick",IDC_CHECK_QUICK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,143,152,43,10
+    PUSHBUTTON      "Format",IDC_BUTTON_FORMAT,192,149,42,15
+    GROUPBOX        "Multi-session",IDC_STATIC,252,141,115,28
+    CONTROL         "Append Data To Disc",IDC_CHECK_LOAD_LAST_TRACK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,259,153,97,9
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,7,178,360,1
+    DEFPUSHBUTTON   "Burn",IDC_BUTTON_CREATE,7,183,50,14
+    PUSHBUTTON      "Create ISO Image",IDC_BUTTON_CREATE_IMAGE,61,183,68,14
+    PUSHBUTTON      "Burn ISO Image",IDC_BUTTON_BURN_IMAGE,133,183,65,14
+    PUSHBUTTON      "Exit",IDCANCEL,317,183,50,14
+END
+
+IDD_PROGRESS_DIALOG DIALOGEX 0, 0, 268, 87
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Working..."
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Stop",IDOK,211,7,50,14
+    CONTROL         "Progress1",IDC_PROGRESS_BAR,"msctls_progress32",0x0,39,7,158,11
+    CTEXT           "",IDC_STATIC_STATUS,39,21,158,11,0,WS_EX_STATICEDGE
+    CONTROL         "",IDC_PROGRESS_INTERNAL_BUFFER,"msctls_progress32",PBS_SMOOTH,89,36,108,11,WS_EX_TRANSPARENT
+    CONTROL         "Device Buffer:",IDC_STATIC,"Static",SS_SIMPLE | WS_GROUP,39,36,48,10
+    RTEXT           "100%",IDC_STATIC,175,50,23,9
+    CONTROL         "0%",IDC_STATIC,"Static",SS_SIMPLE | WS_GROUP,89,50,9,13
+    CTEXT           "",IDC_STATIC_STATUS2,41,60,158,11,0,WS_EX_STATICEDGE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "FileDescription", "DVDBurner MFC Application"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "DVDBurner"
+            VALUE "LegalCopyright", "Copyright (C) 2001"
+            VALUE "OriginalFilename", "DVDBurner.EXE"
+            VALUE "ProductName", "DVDBurner Application"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_BURNER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 367
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 197
+    END
+
+    IDD_PROGRESS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 261
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 80
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
