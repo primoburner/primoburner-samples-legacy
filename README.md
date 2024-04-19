@@ -1,4 +1,4 @@
-# PrimoBurner Samples
+# PrimoBurner Samples (Legacy)
 
 This is a public repo for the PrimoBurner sample projects. Subdirectories in this repository are organized by platform and by language.
 
